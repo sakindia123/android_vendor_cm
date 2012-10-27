@@ -98,9 +98,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bin/modelid_cfg.sh:system/bin/modelid_cfg.sh
 
+#beerbong
 PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/Term.apk:system/app/Term.apk \
-    vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
+    vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
+    packages/apps/ZipInstaller/ZipInstaller-2.4.1.apk:system/app/ZipInstaller.apk \
+    packages/apps/JellyBeerWallpapers/JellyBeerWallpapers.apk:system/app/JellyBeerWallpapers.apk
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
@@ -135,8 +138,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     VideoEditor \
     VoiceDialer \
-    SoundRecorder \
-    Basic
+    SoundRecorder
+#beerbong
+#\
+#    Basic
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
@@ -144,9 +149,10 @@ PRODUCT_PACKAGES += \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf \
-    CMWallpapers \
-    Apollo \
-    CMUpdater
+    Apollo
+#beerbong
+#    CMUpdater
+#    CMWallpapers \
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
@@ -206,11 +212,16 @@ else
     CM_EXTRAVERSION :=
 endif
 
-ifdef CM_RELEASE
-    CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(CM_BUILD)
-else
-    CM_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)$(CM_EXTRAVERSION)
-endif
+# Set JELLY_BEER_VERSION
+JELLY_BEER_VERSION := 3.21
+JELLY_BEER_VERSION_NUMBER := 321
+JELLY_BEER_BUILDDATE := $(shell date -u +%Y%m%d)
+JELLY_BEER_BUILDDATETIME := $(shell date -u +%Y%m%d-%H%M)
+
+CM_BUILDTYPE := JellyBeer-v$(JELLY_BEER_VERSION)
+
+CM_VERSION := $(CM_BUILDTYPE)
+#-$(shell date -u +%Y%m%d)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(CM_VERSION) \

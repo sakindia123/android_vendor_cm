@@ -2,10 +2,11 @@
 $(call inherit-product, vendor/cm/config/common_full.mk)
 
 # Default ringtone
+#beerbong
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=CyanTone.ogg \
-    ro.config.notification_sound=CyanMessage.ogg \
-    ro.config.alarm_alert=CyanAlarm.ogg
+    ro.config.ringtone=Pyxis.ogg \
+    ro.config.notification_sound=Sirrah.ogg \
+    ro.config.alarm_alert=Scandium.ogg
 
 # BT config
 PRODUCT_COPY_FILES += \
