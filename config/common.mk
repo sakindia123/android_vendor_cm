@@ -101,8 +101,7 @@ PRODUCT_COPY_FILES += \
 #beerbong
 PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/Term.apk:system/app/Term.apk \
-    vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
-    packages/apps/ZipInstaller/ZipInstaller-2.4.2.apk:system/app/ZipInstaller.apk
+    vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
@@ -177,7 +176,8 @@ PRODUCT_PACKAGES += \
 
 # wallpapers
 PRODUCT_PACKAGES += \
-    JellyBeerWallpapers
+    JellyBeerWallpapers \
+    ZipInstaller
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/common
