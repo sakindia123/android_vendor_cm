@@ -14,13 +14,12 @@ $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 include vendor/cm/config/cm_audio.mk
 
 # Optional CM packages
-#beerbong
-#PRODUCT_PACKAGES += \
-#    HoloSpiralWallpaper \
-#    MagicSmokeWallpapers \
-#    NoiseField \
-#    Galaxy4 \
-#    LiveWallpapers \
-#    LiveWallpapersPicker \
-#    VisualizationWallpapers \
-#    PhaseBeam
+PRODUCT_PACKAGES += \
+    HoloSpiralWallpaper \
+    MagicSmokeWallpapers \
+    NoiseField \
+    Galaxy4 \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    VisualizationWallpapers \
+    PhaseBeam
