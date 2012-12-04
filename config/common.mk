@@ -139,7 +139,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     VideoEditor \
     VoiceDialer \
-    SoundRecorder
+    SoundRecorder \
+    Basic
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
