@@ -2,6 +2,7 @@
 
 cm_ariesve-userdebug
 cm_grouper-userdebug
+cm_i9100-userdebug
 cm_i9300-userdebug
 cm_maguro-userdebug
 cm_mako-userdebug
